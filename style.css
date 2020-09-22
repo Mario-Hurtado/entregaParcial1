@@ -1,0 +1,38 @@
+.contLinea {
+  display: inline-block;
+}
+
+.fuenteEspecial {
+  font-family: "Satisfy", cursive;
+  font-size: 2em;
+  color: black;
+}
+
+#img-carrito {
+  width: 40px;
+  height: 40px;
+}
+
+#ancho {
+  width: 100%;
+}
+
+#menu {
+  background-color: black;
+}
+
+#burgers {
+  cursor: pointer;
+}
+#tacos {
+  cursor: pointer;
+}
+#salads {
+  cursor: pointer;
+}
+#desserts {
+  cursor: pointer;
+}
+#drinks {
+  cursor: pointer;
+}
