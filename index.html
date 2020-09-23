@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="style.css" />
     <title>Restaurant & Lounge</title>
   </head>
+
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <header>
         <nav class="navbar navbar-expand-lg">
           <button
@@ -40,49 +41,105 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand fuenteEspecial" href="#">
-                Restaurant & Lounge
-              </a>
+              <li class="navbar-brand fuenteEspecial">Restaurant & Lounge</li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
               <img
                 id="img-carrito"
                 src="https://i.imgur.com/1EKrQIi.png"
                 alt="carrito"
+                style="cursor: pointer"
               />
-              <p>2 Items</p>
+              <p class="align-middle" id="numItems"></p>
             </div>
           </div>
         </nav>
       </header>
-      <main id="main">
-        <img src="https://i.imgur.com/S8Ffdqa.png" id="ancho" /><br /><br />
-        <nav
-          class="navbar navbar-expand-lg navbar-dark bg-dark"
-          style="background-color: black"
-        >
+      <main>
+        <img
+          src="https://i.imgur.com/S8Ffdqa.png"
+          id="ancho"
+          alt="Imagen de hamburguesa con pepinillos, cebolla y tomate"
+        /><br />
+        <hr />
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navMenu">
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" id="burgers">Burgers</a>
+                <a class="nav-link active" id="burgers" style="cursor: pointer"
+                  >Burgers</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="tacos">Tacos</a>
+                <a class="nav-link active" id="tacos" style="cursor: pointer"
+                  >Tacos</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="salads">Salads</a>
+                <a class="nav-link active" id="salads" style="cursor: pointer"
+                  >Salads</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="desserts">Desserts</a>
+                <a class="nav-link active" id="desserts" style="cursor: pointer"
+                  >Desserts</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="drinks">Drinks & Sides</a>
+                <a class="nav-link active" id="drinks" style="cursor: pointer"
+                  >Drinks & Sides</a
+                >
               </li>
             </ul>
           </div>
         </nav>
+        <hr />
+        <div class="text-center" id="tituloMenu"></div>
+        <hr />
+        <div class="container" id="main1">
+          <div class="row justify-content-center" id="main"></div>
+        </div>
+        <div class="modal" tabindex="-1" role="dialog" id="modalInfo">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Cancel the order</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure about cancelling the order?</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  style="background-color: antiquewhite; color: black"
+                  id="confirmaCancelar"
+                >
+                  Yes, I want to cancel the order
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  style="background-color: tomato; color: black"
+                  data-dismiss="modal"
+                  id="cerrarModal"
+                >
+                  No, I want to continue adding products
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
-      <footer>
+      <footer class="footer">
         <p class="text-center">
           Contact us: +57 3102105253 - info@restaurant.com - @restaurant
         </p>
@@ -106,5 +163,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>
